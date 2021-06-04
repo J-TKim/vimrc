@@ -6,7 +6,13 @@
 
 ## Install jellybeans.vim
 
+#### Linux
 
+```powershell
+mkdir -p ~/.vim/colors
+cd ~/.vim/colors
+curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/jellybeans.vim
+```
 
 #### Winodws
 

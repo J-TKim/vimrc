@@ -39,7 +39,7 @@ curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/
 
  
 
-### Unix
+### Linux
 
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -53,4 +53,23 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```powershell
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
+```
+
+
+--------
+
+<br>
+
+## Install ctags
+
+### Linux
+
+```bash
+
+```
+
+### Windows
+
+```powershell
+choco install universal-ctags
 ```

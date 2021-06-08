@@ -1,32 +1,40 @@
-set nocompatible
-filetype off
+set shell=/bin/bash
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'blueyed/vim-diminactive'
+call vundle#begin()
 
-call plug#end()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'airblade/vim-gitgutter' " vim with git status(added, modified, and removed lines)
+Plugin 'tpope/vim-fugitive' " vim with git command(e.g., Gdiff)
+Plugin 'vim-airline/vim-airline' " vim status bar
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'blueyed/vim-diminactive'
 
+call vundle#end()
+
+set t_Co=256
+
+" for jellybeans
 colorscheme jellybeans
 
-set encoding=cp949
-set fileencodings=utf-8,cp949
-set langmenu=cp949
+" for taglist
+nmap <F8> :Tagbar<CR>
 
-set number	
-set ignorecase	
-set autoindent
+" set korean
+" set encoding=cp949
+" set fileencodings=utf-8,cp949
+" set langmenu=cp949
+
+set number
+set ignorecase
 set backspace=indent,eol,start
 
+" set for indent
 set autoindent
 set tabstop=4
 set shiftwidth=4
@@ -35,13 +43,22 @@ set softtabstop=4
 " for indent guide
 let g:indentguides_spacechar = '?'
 let g:indentguides_tabchar = '|'
-let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
+" for vim-airline
+let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
+let g:airline_theme='hybrid'
+" set laststatus=2 " turn on bottom bar
+let mapleader = ","
+nnoremap <leader>q :bp<CR>
+nnoremap <leader>w :bn<CR>
+
 " for blueyed/vim-diminactive
-let g:diminactive_enable_focus = 1
+" let g:diminactive_enable_focus = 1
 
 syntax enable
-filetype plugin indent on    " required
+filetype indent on
 highlight Comment term=bold cterm=bold ctermfg=4
+

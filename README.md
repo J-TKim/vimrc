@@ -42,8 +42,9 @@ curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/
 ### Linux
 
 ```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir -p ~/.vim/colors
+cd ~/.vim/colors
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 
@@ -61,12 +62,6 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 <br>
 
 ## Install ctags
-
-### Linux
-
-```bash
-
-```
 
 ### Windows
 

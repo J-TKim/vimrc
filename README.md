@@ -7,7 +7,7 @@
 
 [Vundle.vim github](https://github.com/VundleVim/Vundle.vim)
 
-### Linux
+### Ubuntu
 
 ```bash
 mkdir -p ~/.vim/colors
@@ -51,7 +51,13 @@ curl -O https://raw.githubusercontent.com/nanotech/jellybeans.vim/master/colors/
 
 ## Install ctags
 
-### Windows
+#### Ubuntu
+```bash
+sudo apt install exuberant-ctags
+```
+
+
+#### Windows
 
 ```powershell
 choco install universal-ctags

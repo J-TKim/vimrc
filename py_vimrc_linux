@@ -1,5 +1,8 @@
 set shell=/bin/bash
 
+set nocompatible	" be iMporved, required
+filetype off		" required
+
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -14,6 +17,9 @@ Plugin 'tpope/vim-fugitive' " vim with git command(e.g., Gdiff)
 Plugin 'vim-airline/vim-airline' " vim status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'blueyed/vim-diminactive'
+
+Plugin 'davidhalter/jedi-vim'	" python autocomplete Plugin
+Plugin 'hynek/vim-python-pep8-indent'	" python auto indent Plugin
 
 call vundle#end()
 
@@ -33,9 +39,11 @@ set cursorline
 
 " set for indent
 set autoindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+" set tabstop=4
+" set shiftwidth=4
+" set softtabstop=4
+filetype plugin indent on	" python auto indent on
+
 
 " for indent guide
 let g:indentguides_spacechar = '?'
@@ -55,6 +63,13 @@ nnoremap <leader>w :bn<CR>
 " for blueyed/vim-diminactive
 let g:diminactive_enable_focus = 1
 
+" python Plugin setting
+let g:jedi#show_call_signatures=0
+let g:jedi#popup_select_first="0"
+let g:jedi#force_py_version=3
+
 syntax enable
 filetype indent on
 highlight Comment term=bold cterm=bold ctermfg=4
+
+au FileType python map <f2> : !python3 %

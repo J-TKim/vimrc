@@ -10,7 +10,7 @@
 ### Ubuntu
 
 ```bash
-mkdir -p ~/.vim/colors
+mkdir -p ~/.vim/colors/Vundle.vim
 cd ~/.vim/colors
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```

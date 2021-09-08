@@ -11,7 +11,6 @@
 
 ```bash
 mkdir -p ~/.vim/colors
-cd ~/.vim/colors
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
